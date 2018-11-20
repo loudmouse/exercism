@@ -142,13 +142,13 @@ class BobTest < Minitest::Test
   end
 
   def test_other_whitespace
-    skip
+    # skip
     remark = "\n\r \t"
     assert_equal "Fine. Be that way!", Bob.hey(remark), %q{Bob hears "\n\r \t", and..}
   end
 
   def test_non_question_ending_with_whitespace
-    skip
+    # skip
     remark = "This is a statement ending with whitespace      "
     assert_equal "Whatever.", Bob.hey(remark), %q{Bob hears "This is a statement ending with whitespace      ", and..}
   end

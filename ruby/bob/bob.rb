@@ -1,13 +1,29 @@
 class Bob
 
+  def self.yelling_question(something)
+    (something.split("").last == "?") && (something == something.upcase) && something.count("a-zA-Z") > 0
+  end
+
+  def self.yelling(something)
+    something == something.upcase && something.count("a-zA-Z") > 0
+  end
+
+  def self.asking_question(something)
+    something.strip.split("").last == "?"
+  end
+
+  def self.nothing_said(something)
+    something.strip.empty?
+  end
+
   def self.hey(something)
-    if (something.split("").last == "?") && (something == something.upcase) && something.count("a-zA-Z") > 0
+    if yelling_question(something)
       "Calm down, I know what I'm doing!"
-    elsif something == something.upcase && something.count("a-zA-Z") > 0
+    elsif yelling(something)
       "Whoa, chill out!"
-    elsif something.strip.split("").last == "?"
+    elsif asking_question(something)
       "Sure."
-    elsif something.strip.empty?
+    elsif nothing_said(something)
       "Fine. Be that way!"
     else
       "Whatever."
