@@ -10,7 +10,7 @@ class BobTest < Minitest::Test
   end
 
   def test_shouting
-    skip
+    # skip
     remark = "WATCH OUT!"
     assert_equal "Whoa, chill out!", Bob.hey(remark), %q{Bob hears "WATCH OUT!", and..}
   end
