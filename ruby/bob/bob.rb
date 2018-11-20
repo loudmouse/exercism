@@ -7,6 +7,8 @@ class Bob
       "Whoa, chill out!"
     elsif something.split("").last == "?"
       "Sure."
+    elsif something.empty?
+      "Fine. Be that way!"
     else
       "Whatever."
     end
