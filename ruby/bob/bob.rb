@@ -17,13 +17,14 @@ class Bob
   end
 
   def self.hey(something)
-    if yelling_question(something)
+    case
+    when yelling_question(something)
       "Calm down, I know what I'm doing!"
-    elsif yelling(something)
+    when yelling(something)
       "Whoa, chill out!"
-    elsif asking_question(something)
+    when asking_question(something)
       "Sure."
-    elsif nothing_said(something)
+    when nothing_said(something)
       "Fine. Be that way!"
     else
       "Whatever."
