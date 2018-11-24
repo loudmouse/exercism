@@ -25,14 +25,14 @@ class PangramTest < Minitest::Test
   end
 
   def test_missing_character_x
-    skip
+    # skip
     sentence = 'a quick movement of the enemy will jeopardize five gunboats'
     result = Pangram.pangram?(sentence)
     refute result, "Expected false, got: #{result.inspect}. #{sentence.inspect} is NOT a pangram"
   end
 
   def test_missing_character_h
-    skip
+    # skip
     sentence = 'five boxing wizards jump quickly at it'
     result = Pangram.pangram?(sentence)
     refute result, "Expected false, got: #{result.inspect}. #{sentence.inspect} is NOT a pangram"
