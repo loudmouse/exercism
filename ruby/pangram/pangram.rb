@@ -6,6 +6,7 @@ class Pangram
     else
       alphabet = "abcdefghijklmnopqrstuvwxyz"
       letters = string.split("")
+      letters.delete("_")
       sorted = letters.sort
       deduped = sorted.uniq
       joined_string = deduped.join

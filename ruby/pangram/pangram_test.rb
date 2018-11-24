@@ -39,7 +39,7 @@ class PangramTest < Minitest::Test
   end
 
   def test_pangram_with_underscores
-    skip
+    # skip
     sentence = 'the_quick_brown_fox_jumps_over_the_lazy_dog'
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"
