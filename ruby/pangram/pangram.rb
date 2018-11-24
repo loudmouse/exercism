@@ -5,7 +5,10 @@ class Pangram
       return false
     else
       alphabet = "abcdefghijklmnopqrstuvwxyz"
-      letters = string.tr("0-9", "_")
+      letters = string.downcase
+      letters = letters.tr("0-9", "_")
+      letters = letters.tr(".", "_")
+      letters = letters.tr('"\"', "_")
       split = letters.split("")
       split.delete("_")
       sorted = split.sort
