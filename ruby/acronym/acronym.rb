@@ -4,7 +4,6 @@ class Acronym
     words = string.scan(/\w+/)
     first_letters = words.map { |word| word.chr  }
     acronym = first_letters.join.upcase
-    return acronym
   end
 
 end
