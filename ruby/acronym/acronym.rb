@@ -2,7 +2,7 @@ class Acronym
 
   def self.abbreviate(string)
     words = string.scan(/\w+/)
-    first_letters = words.map { |letter| letter.byteslice(0)  }
+    first_letters = words.map { |word| word.chr  }
     acronym = first_letters.join.upcase
     return acronym
   end
